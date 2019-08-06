@@ -18,6 +18,7 @@ limitations under the License.
 from PIL import Image
 import numpy as np
 import json
+import os
 from tqdm import tqdm
 
 """
@@ -36,6 +37,15 @@ def get_image(fname):
     Get an image from a filepath in ndarray format
     """
     return np.array(Image.open(fname))
+
+
+def get_classes():
+    with open(os.path.join(os.path.dirname(__file__), 'xview_class_labels.txt')) as f:
+        res = {}
+        for l in f:
+            k, v = l.strip().split(':')
+            res[int(k)] = v
+        return res
 
 
 def get_labels(fname):

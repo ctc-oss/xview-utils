@@ -39,8 +39,8 @@ def get_image(fname):
     return np.array(Image.open(fname))
 
 
-def get_classes():
-    with open(os.path.join(os.path.dirname(__file__), 'xview_class_labels.txt')) as f:
+def get_classes(path='xview_class_labels.txt'):
+    with open(os.path.join(os.path.dirname(__file__), path)) as f:
         res = {}
         for l in f:
             k, v = l.strip().split(':')

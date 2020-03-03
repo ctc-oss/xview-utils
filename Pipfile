@@ -7,11 +7,9 @@ verify_ssl = true
 
 [packages]
 configargparse = "==0.14.0"
-numpy = "==1.16.4"
-pillow = "==6.1.0"
+numpy = "==1.17.5"
+pillow = "==7.0.0"
 tqdm = "==4.32.2"
-matplotlib = "==2.2.4"
-opencv-python-headless = "*"
 
 [requires]
 python_version = "3.6"

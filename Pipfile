@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 configargparse = "==0.14.0"
 numpy = "==1.17.5"
-pillow = "==7.0.0"
+pillow = "==8.3.2"
 tqdm = "==4.32.2"
 
 [requires]
